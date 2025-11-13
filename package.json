@@ -1,0 +1,14 @@
+{
+  "name": "web-unblocker-wgl",
+  "version": "1.0.0",
+  "description": "Proxy + WebGL playground",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.0",
+    "http-proxy-middleware": "^2.0.6"
+  },
+  "engines": { "node": ">=18" }
+}

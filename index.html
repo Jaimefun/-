@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Web Unblocker</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10vh;
+      }
+      input {
+        width: 60vw;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+      }
+      button {
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Enter URL to unblock:</h1>
+    <input id="url" placeholder="https://example.com" />
+    <button onclick="go()">Go</button>
+    <script>
+      function go() {
+        const u = document.getElementById("url").value.trim();
+        if (!u) return;
+        const target = "/proxy/" + (u.startsWith("http") ? u : "https://" + u);
+        location.href = target;
+      }
+    </script>
+  </body>
+</html>
